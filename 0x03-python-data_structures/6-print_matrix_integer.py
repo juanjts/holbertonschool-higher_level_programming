@@ -2,5 +2,7 @@
 def print_matrix_integer(matrix=[[]]):
     for f in range(len(matrix)):
         for c in range(len(matrix[f])):
-            print("{}".format(matrix[f][c]), end=" ")
+            print('{:d}'.format(matrix[f][c]), end='')
+            if c != len(matrix[f])-1:
+                print(end=' ')
         print()
