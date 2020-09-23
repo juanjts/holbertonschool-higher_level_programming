@@ -21,17 +21,6 @@ class Square:
 
         return(self.__size * self.__size)
 
-    def my_print(self):
-        """documentation"""
-
-        if self.__size == 0:
-            print()
-        for i in range(self.__position[1]):
-            print()
-        for j in range(self.__size):
-            print("".join([" " for pos in range(self.__position[0])]), end="")
-            print("".join(["#" for sizz in range(self.__size)]))
-
     @property
     def size(self):
         """documentation"""
@@ -68,3 +57,14 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
+
+    def my_print(self):
+        """documentation"""
+
+        if self.__size == 0:
+            print()
+        for i in range(self.__position[1]):
+            print()
+        for j in range(self.__size):
+            print("".join([" " for pos in range(self.__position[0])]), end="")
+            print("".join(["#" for sizz in range(self.__size)]))
