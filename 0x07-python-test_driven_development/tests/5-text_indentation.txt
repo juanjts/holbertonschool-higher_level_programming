@@ -1,0 +1,56 @@
+5. Text indentation module
+==========================
+Function
+========.
+Function  prints a text with 2 new lines after each of these characters: ., ? and :
+
+Operations
+==========
+prints a text with 2 new lines
+
+import module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Cases:
+
+    >>> text_indentation(5)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    >>> text_indentation('Test cases')
+    Test cases
+
+    >>> text_indentation('Test')
+    Test
+
+    >>> text_indentation("Test.")
+    Test.
+    <BLANKLINE>
+
+    text_indentation(".Test")
+    .
+    <BLANKLINE>
+    Test
+
+    >>> text_indentation("Test?")
+    Test?
+    <BLANKLINE>
+    
+    >>> text_indentation("Test:")
+    Test:
+    <BLANKLINE>
+    
+    >>> text_indentation("Test.Test:Test?Test")
+    Test.
+    <BLANKLINE>
+    Test:
+    <BLANKLINE>
+    Test?
+    <BLANKLINE>
+    Test
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
