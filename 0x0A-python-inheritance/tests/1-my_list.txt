@@ -1,0 +1,55 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> my_list
+[1, 4, 2, 3, 5]
+
+>>> l = MyList([])
+>>> l.print_sorted()
+[]
+
+>>> l = MyList()
+>>> l.append(3)
+>>> l.append(-5)
+>>> l.append(5)
+>>> l.print_sorted()
+[-5, 3, 5]
+
+>>> l = MyList([1])
+>>> l.print_sorted()
+[1]
+
+>>> l = MyList([-5, 6, 0, 49652, -8541])
+>>> l.print_sorted()
+[-8541, -5, 0, 6, 49652]
+
+>>> l = MyList()
+>>> isinstance(l, MyList)
+True
+
+>>> l = MyList()
+>>> type(l) == MyList
+True
+
+>>> my_list = MyList(None)
+Traceback (most recent call last):
+...
+TypeError: 'NoneType' object is not iterable
+
+
+>>> my_list = MyList("str")
+>>> my_list.print_sorted()
+['r', 's', 't']
+
+>>> my_list = MyList([0, "a", 0, 0])
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+...
+TypeError: unorderable types: str() < int()
