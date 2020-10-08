@@ -13,6 +13,8 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
+        """initialize method"""
+
         if attrs is not None:
             dic = {}
             for i in attrs:
@@ -20,7 +22,9 @@ class Student:
                     dic[i] = getattr(self, i)
             return dic
         return self.__dict__
-    
+
     def reload_from_json(self, json):
+        """initialize method"""
+
         for i in json:
             self.__dict__[i] = json[i]
