@@ -6,11 +6,11 @@ import sys
 
 
 if __name__ == '__main__':
-    url = argv[1]
-    email = argv[2]
+    url = sys.argv[1]
+    email = sys.argv[2]
 
     e_value = {"email": email}
-    data = urllib.parse.urlencode(values)
+    data = urllib.parse.urlencode(e_value)
     data = data.encode("ascii")
     obj_req = urllib.request.Request(url, data)
     with urllib.request.urlopen(obj_req) as openf_req:
