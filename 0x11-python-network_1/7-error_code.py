@@ -12,4 +12,5 @@ if __name__ == "__main__":
     code = obj_req.status_code
     if code >= 400:
         print("Error code: {}".format(code))
-    print(obj_req.text)
+    else:
+        print(obj_req.text)
