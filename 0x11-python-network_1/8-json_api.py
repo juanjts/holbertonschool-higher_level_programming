@@ -15,8 +15,9 @@ if __name__ == "__main__":
     try:
         if len(obj_req.json()) == 0:
             print("No result")
-        n_id = "[" + str(obj_req.json()['id']) + "]"
-        n_name = obj_req.json()['name']
-        print(n_id + " " + n_name)
+        else:
+            n_id = "[" + str(obj_req.json()['id']) + "]"
+            n_name = obj_req.json()['name']
+            print(n_id + " " + n_name)
     except ValueError:
         print("Not a valid JSON")
