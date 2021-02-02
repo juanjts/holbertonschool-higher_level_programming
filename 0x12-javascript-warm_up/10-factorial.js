@@ -1,6 +1,6 @@
 #!/usr/bin/node
 function fact (a, b) {
-  if (a == 1) {
+  if (a === 1) {
     return b;
   }
   b *= a;
