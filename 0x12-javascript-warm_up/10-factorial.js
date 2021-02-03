@@ -1,16 +1,10 @@
 #!/usr/bin/node
-function fact (a, b) {
-  if (a === 1) {
-    return b;
+//script that computes and prints a factorial
+function factorial (fac) {
+  const nmr = Number(fac);
+  if (isNaN(nmr) === true | nmr === 1) {
+    return 1;
   }
-  b *= a;
-  return fact(--a, b);
+  return nmr * factorial(nmr - 1);
 }
-
-const myVar = process.argv.slice(2);
-const nmr = parseInt(myVar[0], 10);
-if (isNaN(nmr)) {
-  console.log(1);
-} else {
-  console.log(fact(nmr, 1));
-}
+console.log(factorial(process.argv[2]));
