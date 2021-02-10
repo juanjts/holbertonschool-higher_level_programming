@@ -9,7 +9,7 @@ request('https://swapi-api.hbtn.io/api/films/' + args, function (error, response
   }
   const film = JSON.parse(body);
   for (const char in film.characters) {
-    request(film.characters[char], function (error, response, body) {
+    request(film.characters[char], async function (error, response, body) {
       if (error) {
         console.log(error);
       } else {
